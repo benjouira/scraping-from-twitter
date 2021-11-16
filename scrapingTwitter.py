@@ -35,3 +35,24 @@ try:
 except:
 
     print("Error during authentication")
+ 
+#   ****************************
+
+# paste here the name of the twitter account or page
+username = 'RadioMosaiqueFM' 
+
+count = 150
+
+try:
+
+    tweets = tweepy.Cursor(api.user_timeline,id=username).items(count)
+
+    tweets_list = [[tweet.created_at, tweet.id, tweet.text] for tweet in tweets]
+
+    tweets_df = pd.DataFrame(tweets_list)
+
+except BaseException as e:
+
+    print('failed on_status,',str(e))
+
+    time.sleep(3)
