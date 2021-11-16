@@ -17,6 +17,7 @@ api = tweepy.API(auth,wait_on_rate_limit=True)
 try:
     api.verify_credentials()
     print("Authentication OK")
+    
 except:
     print("Error during authentication")
  
@@ -24,7 +25,6 @@ except:
 
 # paste here the name of the twitter account or page
 username = 'RadioMosaiqueFM' 
-
 count = 150
 
 try:
