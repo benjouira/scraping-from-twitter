@@ -56,3 +56,5 @@ except BaseException as e:
     print('failed on_status,',str(e))
 
     time.sleep(3)
+   
+print (tweets_df)
