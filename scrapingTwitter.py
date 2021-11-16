@@ -1,11 +1,6 @@
 import time
-
 import tweepy
-
 import pandas as pd
-
-
- 
 
 #Code d'authentification :
 # you can get api twitter key from here : https://developer.twitter.com/en/apply-for-access
